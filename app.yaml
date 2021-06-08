@@ -1,0 +1,4 @@
+#Install gunicorn: pip install gunicorn
+runtime: python
+env: flex #tem flex e standard
+entrypoint: gunicorn -b :$PORT main:app #O gunicorn é um wsgi e vai, aqui, ouvir o app.run do flask pela porta passada

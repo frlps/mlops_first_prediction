@@ -11,7 +11,7 @@ import pickle
 import os
 
 
-columns = ["tamanho","ano","garagem"]
+columns = ["tamanho","ano","garagem", "Preco"]
 
 #--------Modelo com 1 'feature'---SERIALIZED-------
 
@@ -72,6 +72,8 @@ def cotacao3f():
     return data_output
     #return response
 
-app.run(debug=True, host='0.0.0.0') #0.0.0.0 resolve em todos os ambientes
+app.run(debug=True, host='0.0.0.0', port=5009) #0.0.0.0 resolve em todos os ambientes
 # Rodando debug mode True o flask identifica sozinho 
 # alterações no código e 'restarta' a aplicação
+
+#ALTERAÇÂO
