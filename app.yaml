@@ -2,3 +2,10 @@
 runtime: python
 env: flex #tem flex e standard
 entrypoint: gunicorn -b :$PORT main:app #O gunicorn é um wsgi e vai, aqui, ouvir o app.run do flask pela porta passada
+
+runtime_config:
+  python_version: 3
+
+#Assim temos a segurança de não mostrar as senhas e usuários, pois aqui ele só acessa no momento de fazer o build
+includes:
+  - env_vars.yaml
