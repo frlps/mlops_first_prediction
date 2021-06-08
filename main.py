@@ -16,11 +16,11 @@ columns = ["tamanho","ano","garagem", "Preco"]
 #--------Modelo com 1 'feature'---SERIALIZED-------
 
 #cada '../' desce 1 diretório, uma vez que estamos em  mlops_first_prediction\src\app\main.py
-model = pickle.load(open('../../models/model.sav','rb'))
+model = pickle.load(open('models/model.sav','rb'))
 
 #--------Modelo com 3 'features'---SERIALIZED------
 
-model_3f = pickle.load(open('../../models/model_3f.sav','rb'))
+model_3f = pickle.load(open('models/model_3f.sav','rb'))
 
 
 #-------Iniciando a aplicação com flask ---------
@@ -72,8 +72,9 @@ def cotacao3f():
     return data_output
     #return response
 
-app.run(debug=True, host='0.0.0.0') #0.0.0.0 resolve em todos os ambientes
-# Rodando debug mode True o flask identifica sozinho 
-# alterações no código e 'restarta' a aplicação
+if __name__ == '__main__':
+    app.run(debug=True, host='0.0.0.0') #0.0.0.0 resolve em todos os ambientes
+    # Rodando debug mode True o flask identifica sozinho 
+    # alterações no código e 'restarta' a aplicação
 
-#ALTERAÇÂO
+
