@@ -30,6 +30,7 @@ def sentimento(frase):
     polaridade = tb_en.sentiment.polarity
     return "polaridade: {}".format(polaridade)
 
+#coment criar tamanho aleatorio
 @app.route('/cotacao/random')
 def random():
     tamanho = randrange(30,200)
