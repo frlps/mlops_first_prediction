@@ -43,3 +43,5 @@ def cotacao(tamanho):
     return jsonify(preco=preco[0])
 
 app.run(debug=True)
+
+##comentario teste
